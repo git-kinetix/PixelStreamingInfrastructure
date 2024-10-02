@@ -96,7 +96,7 @@ class Showcase {
 		<p>Welcome to the Pixel Streaming demo showcase!</p>
 		<p> <u>Getting Started</u> </p>
 		<ol>
-			<li>Run the Unreal Engine Pixel Streaming demo project with launch args for this server, example: -PixelStreamingUrl=ws://localhost:8888.</li>
+			<li>Run the Unreal Engine Pixel Streaming demo project with launch args for this server, example: -PixelStreamingUrl=ws://local.dev.kinetix.tech:8888.</li>
 			<li>Click the "click to start" text on this page to start streaming.</li>
 			<li>Use the drop down to select an example.</li>
 			<li>Use control panel on the left to interact with the example.</li>

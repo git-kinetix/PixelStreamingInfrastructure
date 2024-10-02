@@ -5,6 +5,7 @@
 var express = require('express');
 const cors = require('cors');
 var app = express();
+app.use(cors());
 
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +29,7 @@ const defaultConfig = {
 	EnableWebserver: true,
 	MatchmakerAddress: "",
 	MatchmakerPort: 9999,
-	PublicIp: "localhost",
+	PublicIp: "local.dev.kinetix.tech",
 	HttpPort: 80,
 	HttpsPort: 443,
 	StreamerPort: 8888,
@@ -64,7 +65,7 @@ const helmet = require('helmet');
 var hsts = require('hsts');
 var net = require('net');
 
-var FRONTEND_WEBSERVER = 'https://localhost';
+var FRONTEND_WEBSERVER = 'https://local.dev.kinetix.tech';
 if (config.UseFrontend) {
 	var httpPort = 3000;
 	var httpsPort = 8000;
@@ -155,15 +156,10 @@ try {
 }
 
 if (config.UseHTTPS) {
-	app.use(helmet({
+	// FUCK YOU HELMET
+	/*app.use(helmet({
 		contentSecurityPolicy: false
-	}));
-	app.use(cors({
-		origin: '*',
-		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-		allowedHeaders: ['Content-Type', 'Authorization'],
-		credentials: true
-	  }));
+	*/
 	app.use(hsts({
 		maxAge: 15552000  // 180 days in seconds
 	}));

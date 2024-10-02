@@ -1,7 +1,7 @@
 {
 	"UseFrontend": false,
 	"UseMatchmaker": false,
-	"UseHTTPS": false,
+	"UseHTTPS": true,
 	"LogToFile": true,
 	"LogVerbose": true,
 	"HomepageFile": "player.html",
@@ -9,7 +9,7 @@
 	"EnableWebserver": true,
 	"MatchmakerAddress": "",
 	"MatchmakerPort": 9999,
-	"PublicIp": "localhost",
+	"PublicIp": "local.dev.kinetix.tech",
 	"HttpPort": 80,
 	"HttpsPort": 443,
 	"StreamerPort": 8888,

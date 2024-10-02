@@ -19,7 +19,7 @@ Configuration of the signalling server is handled via the config.js file in the 
 | EnableWebserver | Boolean | true | Enables or disables the serving of the frontend through the internal web server. Disbable this if you are serving your own frontend. |
 | MatchmakerAddress | String | | The IP/hostname of the matchmaker application. |
 | MatchmakerPort | Number | 9999 | The port the matchmaker is listening on. |
-| PublicIp | String | "localhost" | The public IP/hostname of the host that the signalling server is listening on. This is used by the matchmaker. |
+| PublicIp | String | "local.dev.kinetix.tech" | The public IP/hostname of the host that the signalling server is listening on. This is used by the matchmaker. |
 | HttpPort | Number | 80 | The port for the internal webserver to listen on. |
 | HttpsPort | Number | 443 | The port for the internal webserver to listen on when HTTPS is enabled. |
 | StreamerPort | Number | 8888 | The port to listen on for new streamer connections. |

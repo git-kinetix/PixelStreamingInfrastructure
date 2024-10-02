@@ -206,7 +206,7 @@ describe('Config', () => {
         window.history.replaceState(
             {},
             '',
-            'http://localhost/?AutoPlayVideo=false&WebRTCMaxBitrate=43210&ss=signalling-url-from-url-param'
+            'http://local.dev.kinetix.tech/?AutoPlayVideo=false&WebRTCMaxBitrate=43210&ss=signalling-url-from-url-param'
         );
 
         const config = new Config({ useUrlParams: true });

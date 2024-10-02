@@ -15,7 +15,7 @@ export const App = () => {
                 initialSettings={{
                     AutoPlayVideo: true,
                     AutoConnect: true,
-                    ss: 'ws://localhost:80',
+                    ss: 'ws://local.dev.kinetix.tech:80',
                     StartVideoMuted: true,
                     HoveringMouse: true,
                     WaitForStreamer: true

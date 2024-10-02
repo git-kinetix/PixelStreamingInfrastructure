@@ -11,7 +11,7 @@ document.body.onload = function() {
 		initialSettings: {
 			AutoPlayVideo: true,
 			AutoConnect: true,
-			ss: "ws://localhost:80",
+			ss: "ws://local.dev.kinetix.tech:80",
 			StartVideoMuted: true,
 			WaitForStreamer: true,
 		}

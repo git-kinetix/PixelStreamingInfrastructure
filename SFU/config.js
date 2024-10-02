@@ -12,7 +12,7 @@ for(let arg of process.argv){
 
 const config = {
   // The URL of the signalling server to connect to
-  signallingURL: "ws://localhost:8889",
+  signallingURL: "ws://local.dev.kinetix.tech:8889",
 
   // The ID for this SFU to use. This will show up as a streamer ID on the signalling server
   SFUId: "SFU",
@@ -77,7 +77,7 @@ const config = {
 
     // here you must specify ip addresses to listen on
     // some browsers have issues with connecting to ICE on
-    // localhost so you might have to specify a proper
+    // local.dev.kinetix.tech so you might have to specify a proper
     // private or public ip here.
     webRtcTransport: {
       listenIps: passedPublicIP != null ? [{ ip: "0.0.0.0", announcedIp: passedPublicIP}] : getLocalListenIps(), 
