@@ -3,6 +3,7 @@
 //-- Server side logic. Serves pixel streaming WebRTC-based page, proxies data back to Streamer --//
 
 var express = require('express');
+const cors = require('cors');
 var app = express();
 
 const fs = require('fs');
@@ -154,8 +155,15 @@ try {
 }
 
 if (config.UseHTTPS) {
-	app.use(helmet());
-
+	app.use(helmet({
+		contentSecurityPolicy: false
+	}));
+	app.use(cors({
+		origin: '*',
+		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+		allowedHeaders: ['Content-Type', 'Authorization'],
+		credentials: true
+	  }));
 	app.use(hsts({
 		maxAge: 15552000  // 180 days in seconds
 	}));
