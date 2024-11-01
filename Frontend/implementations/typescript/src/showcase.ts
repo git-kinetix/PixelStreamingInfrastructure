@@ -31,6 +31,8 @@ document.body.onload = function() {
 
 class Showcase {
 
+	
+	
 	private _pixelStreaming : PixelStreaming;
 	private _infoElem : HTMLElement;
 	private _exampleSettingsElem : HTMLElement;
